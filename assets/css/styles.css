@@ -1,25 +1,126 @@
-/* Sprint 002: Design system foundation */
+/* Sprint 009: Global design system update */
+/* font import is added in HTML head per spec */
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Playfair Display", Georgia, serif;
-  background: #0F1115;
-  color: #FFFFFF;
-  font-size: 18px;
+  /* body and navigation use Inter */
+  font-family: Inter, system-ui, sans-serif;
+  background: #FFFFFF; /* main background */
+  color: #000000; /* primary text on white */
+  font-size: 16px; /* body text size per typography system */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 40px; /* global horizontal spacing */
 }
 
-h1 { font-size: 64px; }
-h2 { font-size: 40px; }
-h3 { font-size: 28px; }
+h1 {
+  font-size: 64px;
+  /* headings use serif font */
+  font-family: "Playfair Display", serif;
+}
+h2 {
+  font-size: 40px;
+  font-family: "Playfair Display", serif;
+}
+h3 {
+  font-size: 28px;
+  font-family: "Playfair Display", serif;
+}
 
 .section {
   margin-top: 96px;
+}
+
+/* header styles (Sprint 009) */
+.header {
+  background: #000000;
+  color: #FFFFFF;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0; /* vertical padding 20px per spec, horizontal handled by container */
+}
+.header .logo {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header nav a {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-left: 32px;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .2s;
+}
+.header nav a:hover {
+  opacity: 0.7;
+}
+.header nav .contact-button {
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 6px;
+  padding: 10px 18px;
+  margin-left: 32px;
+  text-decoration: none;
+}
+
+/* footer styles (Sprint 009) */
+.footer {
+  background: #FFFFFF;
+  color: #000000;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 0;
+}
+.footer .left,
+.footer .right {
+  display: flex;
+  flex-direction: column;
+}
+.footer .left .logo {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 36px;
+  color: #000000;
+  text-decoration: none;
+}
+.footer .left .social {
+  margin-top: 8px;
+}
+.footer .right a {
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+.footer .divider {
+  width: 1px;
+  background: #E5E5E5;
+  margin: 0 40px;
+  min-height: 120px;
+}
+
+/* generic button style matching contact button */
+.button,
+.contact-button {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 6px;
+  padding: 10px 18px;
+  text-decoration: none;
 }
 
 /* project cards (Sprint 08) */
@@ -32,10 +133,11 @@ h3 { font-size: 28px; }
 .project-card {
   flex: 1 1 calc(33.333% - 32px);
   padding: 24px;
-  background: #1a1a1a;
+  background: #FFFFFF; /* main background allowed */
+  border: 1px solid #E5E5E5; /* divider color on white */
   border-radius: 8px;
   text-decoration: none;
-  color: inherit;
+  color: #000000; /* primary text on white */
 }
 
 .project-card img {
