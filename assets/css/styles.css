@@ -21,3 +21,38 @@ h3 { font-size: 28px; }
 .section {
   margin-top: 96px;
 }
+
+/* project cards (Sprint 08) */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.project-card {
+  flex: 1 1 calc(33.333% - 32px);
+  padding: 24px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.project-card .project-type {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
