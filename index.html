@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dhruvi Malusare Portfolio</title>
-  <!-- font import per design system -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -13,54 +11,87 @@
     <div class="container">
       <a href="index.html" class="logo">Dhruvi Malusare</a>
       <nav>
-        <a href="#" target="_blank">Resume</a>
         <a href="work.html">Work</a>
-        <a href="mailto:drm23@njit.edu" class="contact-button">Contact</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
-  <div class="container">
-    <!-- Hero Section -->
-    <section class="hero section">
-      <h1>Dhruvi Malusare</h1>
-      <p>I'm an aspiring Product Manager with a background in User Experience Design and a strong interest in Data Analytics.</p>
-      <a href="about.html" class="button">Learn more</a>
-    </section>
 
-    <!-- UX Projects (primary focus) -->
-    <section class="ux-projects section">
-      <h2>UX Projects</h2>
-      <div class="projects">
-        <a href="project-example.html" class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="Thrive UX Design thumbnail">
-          <span class="project-type">UX Design</span>
-          <h3>Thrive UX Design</h3>
-        </a>
-        <a href="project-example.html" class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="Wayfinding UX Design thumbnail">
-          <span class="project-type">UX Design</span>
-          <h3>Wayfinding UX Design</h3>
-        </a>
-        <a href="project-example.html" class="project-card">
-          <img src="https://via.placeholder.com/300x200" alt="ResearchGate UX Design thumbnail">
-          <span class="project-type">UX Design</span>
-          <h3>ResearchGate UX Design</h3>
-        </a>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Dhruvi Malusare</h1>
+        <p>I'm an aspiring Product Manager with a background in User Experience Design, Product Design, 3D Design & Animation and a strong interest in Data Analytics</p>
+        <a href="work.html" class="button">View Work</a>
       </div>
     </section>
-  </div>
+
+    <!-- Credibility Strip -->
+    <section class="credibility-strip">
+      <div class="container">
+        <div class="credibility-item">
+          <h3>12</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="credibility-item">
+          <h3>48</h3>
+          <p>User Interviews Conducted</p>
+        </div>
+        <div class="credibility-item">
+          <h3>24</h3>
+          <p>Usability Tests Run</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+          <a href="projects/wayfinding.html" class="project-card">
+            <img src="https://via.placeholder.com/400x300" alt="Wayfinding UX Design thumbnail">
+            <span class="project-type">UX Design</span>
+            <h3>Wayfinding</h3>
+            <p class="impact">+45% Navigation Success Rate</p>
+          </a>
+          <a href="projects/thrive.html" class="project-card">
+            <img src="https://via.placeholder.com/400x300" alt="Thrive UX Design thumbnail">
+            <span class="project-type">UX Design</span>
+            <h3>Thrive</h3>
+            <p class="impact">+30% User Engagement</p>
+          </a>
+          <a href="projects/researchgate.html" class="project-card">
+            <img src="https://via.placeholder.com/400x300" alt="ResearchGate UX Design thumbnail">
+            <span class="project-type">UX Design</span>
+            <h3>ResearchGate</h3>
+            <p class="impact">+25% Research Efficiency</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I'm a product-focused designer and aspiring Product Manager with expertise in UX research, interface design, and data-driven decision making. My approach combines user-centered design principles with business objectives to create products that people love and that drive measurable results.</p>
+        <a href="about.html" class="button">Read More</a>
+      </div>
+    </section>
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="left">
         <a href="index.html" class="logo">Dhruvi Malusare</a>
         <a href="#" class="social">LinkedIn</a>
       </div>
-      <div class="divider"></div>
       <div class="right">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="#" target="_blank">Resume</a>
-        <a href="mailto:drm23@njit.edu">Contact</a>
+        <a href="mailto:drm23@njit.edu">drm23@njit.edu</a>
+        <a href="#" class="social">LinkedIn</a>
       </div>
     </div>
   </footer>
