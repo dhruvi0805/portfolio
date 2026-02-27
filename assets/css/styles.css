@@ -222,6 +222,17 @@ p {
   transform: translateY(-1px);
 }
 
+.button-black {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-text-primary);
+}
+
+.button-black:hover {
+  background: var(--color-text-primary);
+  color: var(--color-background);
+}
+
 /* Hero section per Sprint 10 spec */
 .hero {
   min-height: 80vh;
