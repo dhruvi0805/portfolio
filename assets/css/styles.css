@@ -233,24 +233,62 @@ p {
   color: var(--color-background);
 }
 
+.button-white {
+  background: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.button-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
 /* Hero section per Sprint 10 spec */
 .hero {
   min-height: 80vh;
-  background: linear-gradient(180deg, #0F1115 0%, #12151B 100%);
+  background: linear-gradient(135deg, #FF6B35 0%, #8B4513 100%);
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 96px 0;
 }
 
-.hero h1 {
-  margin-bottom: 24px;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 1px, rgba(255,255,255,.03) 1px, rgba(255,255,255,.03) 2px),
+    repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(0,0,0,.03) 1px, rgba(0,0,0,.03) 2px);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.hero p {
-  font-size: 20px;
-  color: var(--color-text-secondary);
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-name {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 80px;
+  font-weight: 400;
+  color: #FFFFFF;
   margin-bottom: 48px;
-  max-width: 600px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  line-height: 1;
 }
 
 /* Credibility strip */
@@ -288,13 +326,26 @@ p {
 
 .project-card {
   flex: 1 1 calc(33.333% - 32px);
-  background: var(--color-surface);
+  background: linear-gradient(135deg, var(--color-surface) 0%, rgba(22, 26, 32, 0.8) 100%);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   text-decoration: none;
   color: var(--color-text-primary);
   padding: 32px;
   transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .project-card:hover {
@@ -509,6 +560,10 @@ ul li::before {
     font-size: 48px;
   }
   
+  .hero-name {
+    font-size: 60px;
+  }
+  
   .hero p {
     font-size: 18px;
   }
@@ -546,6 +601,10 @@ ul li::before {
   
   .hero h1 {
     font-size: 40px;
+  }
+  
+  .hero-name {
+    font-size: 48px;
   }
   
   .hero p {
